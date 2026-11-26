@@ -63,6 +63,7 @@ project-template/
 │   ├── bare-metal/     #   通用 HAL 风格 C + Makefile
 │   ├── arduino/        #   Arduino / ESP32 (C++) + platformio.ini
 │   ├── esp-idf/        #   ESP32 官方框架 (CMake/idf.py)
+│   ├── stm32/          #   STM32 HAL + CMake/Make
 │   ├── micropython/    #   Raspberry Pi Pico (Python)
 │   ├── fpga/           #   Verilog 闪烁模块 + 测试平台
 │   └── pcb/            #   原理图 + PCB + BOM + 制板输出

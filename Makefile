@@ -12,7 +12,7 @@
 CODE_DIR := code
 
 # 支持「make 构建」的硬件平台（各目录需自带 Makefile）
-HW_BUILDABLE := bare-metal esp-idf
+HW_BUILDABLE := bare-metal esp-idf stm32
 
 .PHONY: help lint test build clean all $(HW_BUILDABLE)
 
