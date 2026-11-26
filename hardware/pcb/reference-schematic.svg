@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" font-family="monospace" font-size="13">
+  <rect width="680" height="420" fill="#fafafa" stroke="#ccc"/>
+  <text x="20" y="28" font-size="16" font-weight="bold">Reference Schematic — 典型 MCU 最小系统（参考用，非生产文件）</text>
+
+  <!-- Power -->
+  <rect x="40" y="60" width="120" height="70" fill="#fff" stroke="#333"/>
+  <text x="62" y="92" font-weight="bold">3V3 LDO</text>
+  <text x="62" y="112">IN 5V</text>
+  <text x="62" y="128">OUT 3V3</text>
+  <line x1="160" y1="125" x2="210" y2="125" stroke="#e74c3c" stroke-width="2"/>
+  <text x="168" y="118" fill="#e74c3c">3V3</text>
+
+  <!-- Decoupling -->
+  <circle cx="240" cy="125" r="10" fill="#fff" stroke="#333"/>
+  <text x="258" y="129">100nF</text>
+  <line x1="210" y1="125" x2="230" y2="125" stroke="#e74c3c" stroke-width="2"/>
+
+  <!-- MCU -->
+  <rect x="300" y="60" width="180" height="120" fill="#eef6ff" stroke="#333"/>
+  <text x="345" y="92" font-weight="bold">MCU</text>
+  <text x="318" y="116">VDD ─┐</text>
+  <text x="318" y="134">GND ─┘</text>
+  <text x="318" y="156">PA0 (LED)</text>
+  <text x="318" y="172">NRST</text>
+
+  <!-- VDD connection -->
+  <line x1="250" y1="125" x2="300" y2="125" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="340" y1="108" x2="340" y2="125" stroke="#e74c3c" stroke-width="2"/>
+
+  <!-- GND -->
+  <line x1="340" y1="128" x2="340" y2="200" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="40" y1="200" x2="640" y2="200" stroke="#2c3e50" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="44" y="216" fill="#2c3e50">GND (common)</text>
+
+  <!-- LED + resistor on PA0 -->
+  <line x1="480" y1="148" x2="540" y2="148" stroke="#27ae60" stroke-width="2"/>
+  <text x="488" y="142" fill="#27ae60">PA0</text>
+  <rect x="540" y="138" width="40" height="20" fill="#fff" stroke="#333"/>
+  <text x="546" y="152">220Ω</text>
+  <line x1="580" y1="148" x2="600" y2="148" stroke="#27ae60" stroke-width="2"/>
+  <circle cx="620" cy="148" r="12" fill="#fff" stroke="#e74c3c"/>
+  <text x="624" y="152" fill="#e74c3c">+</text>
+  <line x1="620" y1="160" x2="620" y2="200" stroke="#2c3e50" stroke-width="2"/>
+
+  <text x="40" y="400" fill="#888">注：此图为结构示意，实际请以 EDA 工程（schematics/ 与 board/）为准。</text>
+</svg>

@@ -1,0 +1,9 @@
+(kicad_sch (version 20231120) (generator kicad-cli)
+  (uuid 00000000-0000-0000-0000-000000000001)
+  (paper "A4")
+  (title_block
+    (title "project-template reference schematic")
+    (comment 1 "占位工程，请替换为正式原理图"))
+  (lib_symbols)
+  (sheet_instances (path "/" (page "1")))
+)

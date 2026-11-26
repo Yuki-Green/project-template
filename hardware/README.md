@@ -9,6 +9,7 @@
 | `esp-idf/`    | ESP32 官方框架 (CMake)     | 量产级 ESP32 固件（idf.py）   |
 | `micropython/`| Raspberry Pi Pico (Python) | 树莓派 Pico / RP2040           |
 | `fpga/`       | Verilog + 测试平台         | 数字逻辑、FPGA                 |
+| `pcb/`        | 原理图 + PCB + BOM + 制板  | 电路板设计（KiCad 等 EDA）    |
 
 > 这些示例刻意保持「最小」：LED 闪烁 / 读取一个数字输入。它们的作用是
 > 给你一个**结构模板**，把真正的业务逻辑替换进去即可。

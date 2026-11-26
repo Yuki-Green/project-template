@@ -53,3 +53,21 @@ htmlcov/
 *.tmp
 *.bak
 .DS_Store
+
+# ===== EDA / KiCad（保留工程与 Gerber，忽略本地缓存）=====
+# 忽略缓存/会话/备份，不忽略可复现的工程与制板产物
+*.kicad_prl
+*.kicad_wks
+*-bak
+*.sch-bak
+*.pcb-bak
+*~
+autosave/
+*.pro
+# 下面这些建议保留（制板与版本管理需要），仅注释提示：
+# *.kicad_pro / *.kicad_sch / *.kicad_pcb / *.gbr / *.drl / *.pos 保持纳入版本控制
+
+# ===== Eagle / 其他 EDA =====
+*.sch~e
+*.brd~e
+*.lck

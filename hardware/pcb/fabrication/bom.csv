@@ -1,0 +1,19 @@
+﻿# BOM 模板（物料清单）
+# 说明：复制本文件为 bom_revX.Y.csv，按实际 BOM 填写；供制板/SMT 贴片使用。
+# 列说明：
+#   Ref       - 位号（如 R1, C3, U1）
+#   Qty       - 数量
+#   Value     - 标称值/型号（如 10k, 100nF, STM32F103C8T6）
+#   Package   - 封装（如 0603, 0805, LQFP-48）
+#   MPN       - 制造商料号（Manufacturer Part Number）
+#   Footprint - PCB 封装名（与 .kicad_pcb 对应）
+#   Note      - 备注（DNP=不贴, 极性, 替代料等）
+
+Ref,Qty,Value,Package,MPN,Footprint,Note
+R1,1,220,0805,,R_0805,LED 限流
+R2,1,10k,0603,,R_0603,上拉
+C1,1,100nF,0603,,C_0603,去耦
+C2,1,10uF,1206,,C_1206,电源滤波
+U1,1,MCU,,STM32F103C8T6,LQFP-48,
+D1,1,LED_RED,0603,,LED_0603,电源指示
+J1,1,USB_C,,,USB_C_16P,供电/烧录

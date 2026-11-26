@@ -62,8 +62,10 @@ project-template/
 ├── hardware/           # 【硬件】多平台示例（按需取用）
 │   ├── bare-metal/     #   通用 HAL 风格 C + Makefile
 │   ├── arduino/        #   Arduino / ESP32 (C++) + platformio.ini
+│   ├── esp-idf/        #   ESP32 官方框架 (CMake/idf.py)
 │   ├── micropython/    #   Raspberry Pi Pico (Python)
-│   └── fpga/           #   Verilog 闪烁模块 + 测试平台
+│   ├── fpga/           #   Verilog 闪烁模块 + 测试平台
+│   └── pcb/            #   原理图 + PCB + BOM + 制板输出
 ├── docs/               # 【文档】说明文档
 ├── .gitignore
 ├── LICENSE

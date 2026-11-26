@@ -1,0 +1,39 @@
+{
+  "board": {
+    "3d_models_default_disable": false,
+    "design_settings": {
+      "defaults": {
+        "clearance": "0.2mm",
+        "mask_margin": "0.05mm",
+        "track_width": "0.25mm",
+        "via_diameter": "0.8mm",
+        "via_drill": "0.4mm"
+      },
+      "rules": {
+        "enable": true
+      }
+    },
+    "stackup": {
+      "copper_layers": 2,
+      "thickness": "1.6mm"
+    }
+  },
+  "meta": {
+    "filename": "project-template.kicad_pro",
+    "version": 8
+  },
+  "net_settings": {
+    "net_classes": [
+      {
+        "name": "Default",
+        "clearance": "0.2mm",
+        "track_width": "0.25mm",
+        "via_diameter": "0.8mm",
+        "via_drill": "0.4mm"
+      }
+    ]
+  },
+  "schematic": {
+    "legacy_lib_dir": ""
+  }
+}
