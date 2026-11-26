@@ -6,6 +6,7 @@
 | ------------- | -------------------------- | ------------------------------ |
 | `bare-metal/` | 通用 HAL 风格 C + Makefile | MCU 裸机、无 RTOS              |
 | `arduino/`    | Arduino / ESP32 (C++)      | 创客、物联网快速原型           |
+| `esp-idf/`    | ESP32 官方框架 (CMake)     | 量产级 ESP32 固件（idf.py）   |
 | `micropython/`| Raspberry Pi Pico (Python) | 树莓派 Pico / RP2040           |
 | `fpga/`       | Verilog + 测试平台         | 数字逻辑、FPGA                 |
 

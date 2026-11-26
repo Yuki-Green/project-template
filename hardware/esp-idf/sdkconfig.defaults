@@ -1,0 +1,3 @@
+# ESP-IDF 默认配置项（menuconfig 可覆盖）
+# 闪烁引脚：ESP32 开发板常用 GPIO2（板载 LED）
+CONFIG_BLINK_GPIO=2
