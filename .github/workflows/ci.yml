@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # —— 按你的技术栈选择/替换下面步骤 ——
+
+      # Node 示例
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      #     cache: npm
+      # - run: npm ci
+      # - run: npm run lint
+      # - run: npm test
+
+      # Python 示例
+      # - uses: actions/setup-python@v5
+      #   with:
+      #     python-version: "3.11"
+      # - run: pip install -e ".[dev]"
+      # - run: pytest
+
+      # Go 示例
+      # - uses: actions/setup-go@v5
+      #   with:
+      #     go-version: "1.22"
+      # - run: go build ./...
+      # - run: go test ./...
+
+      - name: Placeholder
+        run: echo "请按技术栈启用上面的构建/测试步骤"

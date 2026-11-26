@@ -1,0 +1,55 @@
+# ===== 操作系统 / 编辑器 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# ===== 依赖 / 构建产物（按需要启用）=====
+node_modules/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+target/
+bin/
+obj/
+
+# ===== 日志 / 缓存 =====
+*.log
+logs/
+.cache/
+.tmp/
+
+# ===== 环境变量 / 密钥（切勿提交真实密钥）=====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ===== 测试 / 覆盖率 =====
+coverage/
+.coverage
+htmlcov/
+.nyc_output/
+
+# ===== 包管理锁文件（按需保留或忽略）=====
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# poetry.lock
+# Gemfile.lock
+
+# ===== 杂项 =====
+*.tmp
+*.bak
+.DS_Store

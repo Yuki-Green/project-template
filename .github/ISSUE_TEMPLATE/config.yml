@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 安全漏洞
+    url: https://github.com/{{OWNER}}/{{REPO_NAME}}/security/advisories/new
+    about: 请私下报告安全漏洞，不要公开 Issue
+  - name: 💬 讨论区
+    url: https://github.com/{{OWNER}}/{{REPO_NAME}}/discussions
+    about: 通用问题、想法交流来这里

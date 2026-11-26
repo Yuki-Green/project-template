@@ -1,0 +1,7 @@
+# CODEOWNERS
+# 默认所有文件由维护者审核
+*       @{{OWNER}}
+
+# 可按目录细分
+# /src/    @{{OWNER}}/core-team
+# /docs/   @{{OWNER}}/docs-team
