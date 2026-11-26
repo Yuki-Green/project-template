@@ -2,7 +2,7 @@
 # 顶层 Makefile —— 统一入口
 # 目标: help / lint / test / build / clean / all
 # 说明: 这是一个脚手架。复制模板后，按你的技术栈把具体命令
-#       填入对应目标即可。硬件各平台在 hardware/<platform>/ 下
+#       填入对应目标即可。软件各平台在 software/<platform>/ 下
 #       有各自构建方式，顶层通过遍历已知子目录统一调度。
 # =====================================================================
 
@@ -26,12 +26,12 @@ help:
 	@echo "  make all     lint + test + build"
 	@echo ""
 	@echo "硬件平台构建（按需启用，需先装对应工具链）:"
-	@echo "  make -C hardware/bare-metal build   # 裸机 C (gcc)"
-	@echo "  make -C hardware/esp-idf build      # ESP-IDF (idf.py)"
+	@echo "  make -C software/bare-metal build   # 裸机 C (gcc)"
+	@echo "  make -C software/esp-idf build      # ESP-IDF (idf.py)"
 	@echo "其他平台手动构建:"
-	@echo "  hardware/arduino    -> platformio run"
-	@echo "  hardware/micropython-> mpremote run main.py"
-	@echo "  hardware/fpga       -> iverilog + gtkwave"
+	@echo "  software/arduino    -> platformio run"
+	@echo "  software/micropython-> mpremote run main.py"
+	@echo "  software/fpga       -> iverilog + gtkwave"
 
 # ---- 软件：lint / test ----
 # 按语言启用，例如:
@@ -54,17 +54,17 @@ build: $(HW_BUILDABLE)
 	@echo ">> [build] 软件构建（按需启用，例如 docker build / npm run build）"
 
 $(HW_BUILDABLE):
-	@echo ">> [build:$@] 构建硬件平台: $@"
-	@if [ -f hardware/$@/Makefile ]; then \
-		$(MAKE) -C hardware/$@ build || echo "   (跳过 $@：需先配置工具链)"; \
+	@echo ">> [build:$@] 构建软件平台: $@"
+	@if [ -f software/$@/Makefile ]; then \
+		$(MAKE) -C software/$@ build || echo "   (跳过 $@：需先配置工具链)"; \
 	else \
-		echo "   hardware/$@ 无 Makefile，请按该目录 README 手动构建"; \
+		echo "   software/$@ 无 Makefile，请按该目录 README 手动构建"; \
 	fi
 
 clean:
 	@echo ">> [clean] 清理产物"
 	@for p in $(HW_BUILDABLE); do \
-		if [ -f hardware/$$p/Makefile ]; then $(MAKE) -C hardware/$$p clean 2>/dev/null || true; fi; \
+		if [ -f software/$$p/Makefile ]; then $(MAKE) -C software/$$p clean 2>/dev/null || true; fi; \
 	done
 
 all: lint test build

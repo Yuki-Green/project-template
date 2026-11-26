@@ -49,7 +49,8 @@ cd {{REPO_NAME}}
 | 目录       | 用途                         |
 | ---------- | ---------------------------- |
 | `code/`    | 软件代码 + 测试              |
-| `hardware/`| 硬件示例（多平台，按需取用） |
+| `software/`| 嵌入式软件示例（多平台，按需取用） |
+| `pcb/`     | 原理图 + PCB + BOM + 制板    |
 | `docs/`    | 说明文档                     |
 
 ```
@@ -59,14 +60,18 @@ project-template/
 │   └── workflows/
 ├── code/               # 【代码】软件源码 + 测试
 │   └── tests/          #   测试
-├── hardware/           # 【硬件】多平台示例（按需取用）
+├── software/           # 【嵌入式软件】多平台示例（按需取用）
 │   ├── bare-metal/     #   通用 HAL 风格 C + Makefile
 │   ├── arduino/        #   Arduino / ESP32 (C++) + platformio.ini
 │   ├── esp-idf/        #   ESP32 官方框架 (CMake/idf.py)
 │   ├── stm32/          #   STM32 HAL + CMake/Make
 │   ├── micropython/    #   Raspberry Pi Pico (Python)
-│   ├── fpga/           #   Verilog 闪烁模块 + 测试平台
-│   └── pcb/            #   原理图 + PCB + BOM + 制板输出
+│   └── fpga/           #   Verilog 闪烁模块 + 测试平台
+├── pcb/                # 【硬件/电路】原理图 + PCB + BOM + 制板输出
+│   ├── schematics/     #   原理图源文件
+│   ├── board/          #   PCB 布局源文件
+│   ├── fabrication/    #   制板输出（Gerber/BOM/坐标）
+│   └── kicad-example/  #   KiCad 工程占位
 ├── docs/               # 【文档】说明文档
 ├── .gitignore
 ├── LICENSE
@@ -76,7 +81,7 @@ project-template/
 └── README.md
 ```
 
-> 硬件示例详见 [hardware/README.md](hardware/README.md)。按工程情况保留对应子目录，其余删除即可。
+> 嵌入式软件示例详见 [software/README.md](software/README.md)；电路/PCB 详见 [pcb/README.md](pcb/README.md)。按工程情况保留对应子目录，其余删除即可。
 
 ## 🛠️ 开发
 

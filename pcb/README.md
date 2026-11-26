@@ -27,8 +27,8 @@
 
 ## 选型参考
 
-- MCU 最小系统可参考 `../bare-metal/` 的 HAL 抽象；
-- 无线/ESP 类可参考 `../esp-idf/` 或 `../arduino/` 的引脚与电源设计。
+- MCU 最小系统可参考 `../software/bare-metal/` 的 HAL 抽象；
+- 无线/ESP 类可参考 `../software/esp-idf/` 或 `../software/arduino/` 的引脚与电源设计。
 
 > 本目录下的 `reference-schematic.svg` 是一个**可读的参考原理图**（电源 + MCU + LED），
 > 用于说明本项目板级的典型连接，不是可直接生产的工程文件。
